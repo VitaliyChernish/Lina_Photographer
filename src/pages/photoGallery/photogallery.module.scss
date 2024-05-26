@@ -1,0 +1,19 @@
+.photoGalleryMain {
+    background-color: rgba(22, 22, 23, 1);
+    background-color: rgb(15, 15, 15);
+    transition-duration: 1s;
+}
+
+.navigations {
+    margin-left: 0vw;
+    transform: translateX(8vw);
+    transform: translateY(5vh);
+}
+
+.mainMenuWrapper {}
+
+@media screen and (min-width: 600px) {
+    .photoGalleryMain{
+        overflow: hidden;
+    }
+}

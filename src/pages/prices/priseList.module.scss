@@ -1,0 +1,292 @@
+@import '../../null.scss';
+
+.buy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: seagreen;
+    width: 70%;
+    height: 10vh;
+    margin-bottom: 5%;
+    color: white;
+}
+
+.pricesMainScreen {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: gray;
+
+    .priceContainer {
+        position: relative;
+        top: 15vw;
+        width: 90%;
+        height: calc(var(--index) * 23);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 5%;
+
+
+        .position {
+            height: 100%;
+            width: 30%;
+            position: relative;
+            display: flex;
+
+
+            .positionFront {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    font-size: calc(var(--index) * 1.3);
+                    margin: 1.5vh;
+                    color: white;
+                    font-weight: 500;
+                }
+
+                span {
+                    font-size: calc(var(--index) / 1.7);
+                }
+
+                .price {
+                    font-size: calc(var(--index) / 1.3);
+                    line-height: 2.2;
+                    text-align: center;
+                    margin: 3vh;
+                    width: 60%;
+                    color: white;
+                }
+
+                .elementPos {
+                    width: 70%;
+                    font-size: calc(var(--index) / 1.7);
+                    text-align: start;
+                    padding: 1.5vh;
+                    border-bottom: 1px solid white;
+
+                    span {
+                        padding-left: 6%;
+                        text-wrap: nowrap;
+                    }
+                }
+
+                .labelMoreDetail {
+                    width: 70%;
+                    font-size: calc(var(--index) / 1.3);
+                    line-height: 2.2;
+                    text-align: center;
+                    margin: 3vh;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                button {
+                    display: none;
+                }
+            }
+
+            .positionBack {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transform: rotateY(90deg);
+                background-color: rgb(22, 22, 23);
+
+                h2 {
+                    font-size: calc(var(--index) * 1.3);
+                    margin: 1.5vh;
+                    color: rgb(255, 0, 0);
+                    font-weight: 500;
+                }
+
+                span {
+                    font-size: calc(var(--index) / 1.7);
+                }
+
+                .price {
+                    font-size: calc(var(--index) / 1.3);
+                    line-height: 2.2;
+                    text-align: center;
+                    margin: 3vh;
+                    width: 60%;
+                    color: white;
+                }
+
+                .elementPos {
+                    width: 70%;
+                    font-size: calc(var(--index) / 1.7);
+                    text-align: start;
+                    padding: 1.5vh;
+                    border-bottom: 1px solid white;
+                    span {
+                        padding-left: 6%;
+                        text-wrap: nowrap;
+                    }
+                }
+
+                .labelMoreDetail {
+                    width: 60%;
+                    font-size: calc(var(--index) / 1.3);
+                    line-height: 2.2;
+                    text-align: center;
+                    margin: 3vh;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                button {
+                    display: none;
+                }
+            }
+
+            .style1 {
+                border: 3px solid transparent;
+                border-image: linear-gradient(to right, #fd4c20a6, #20ff75a6);
+                border-image-slice: 1;
+            }
+
+            .style2 {
+                border: 3px solid transparent;
+                border-image: linear-gradient(to right, #baff5fa6, #1c45fda6);
+                border-image-slice: 1;
+            }
+
+            .style3 {
+                border: 3px solid transparent;
+                border-image: linear-gradient(to right, #ff5fcfa6, #06daffa6);
+                border-image-slice: 1;
+            }
+
+            .styleBack1 {
+                border: 3px solid transparent;
+                border-image: linear-gradient(to right, #20ff75a6, #fd4c20a6);
+                border-image-slice: 1;
+            }
+
+            .styleBack2 {
+                border: 3px solid transparent;
+                border-image: linear-gradient(to right, #1c45fda6, #baff5fa6);
+                border-image-slice: 1;
+            }
+
+            .styleBack3 {
+                border: 3px solid transparent;
+                border-image: linear-gradient(to right, #06daffa6, #ff5fcfa6);
+                border-image-slice: 1;
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .pricesMainScreen {
+        width: 100%;
+        .priceContainer {
+            flex-direction: column;        
+            height: 100vh;    
+            top: 10%;
+            align-items: center;
+            gap: 3%;
+            
+            .position {
+                position: relative;
+                width: 100%;
+                
+                .positionFront {
+                    position: relative;
+                    h2{
+                        font-size: calc(var(--index) * 3);
+                    }
+                    span{
+                        font-size: calc(var(--index) * 1.5);
+                    }
+                    .elementPos{
+                        span{
+                            font-size: calc(var(--index) * 1);
+                        }
+                    }
+                }
+
+                .positionBack {
+                    h2{
+                        font-size: calc(var(--index) * 3);
+                    }
+                    span{
+                        font-size: calc(var(--index) * 1.5);
+                    }
+                    .elementPos{
+                        span{
+                            font-size: calc(var(--index) * 1);
+                        }
+                    }
+                }
+                .style1 {
+                    border: 7px solid transparent;
+                    border-image: linear-gradient(to right, #fd4c20a6, #20ff75a6);
+                    border-image-slice: 1;
+                }
+            
+                .style2 {
+                    border: 3px solid transparent;
+                    border-image: linear-gradient(to right, #baff5fa6, #1c45fda6);
+                    border-image-slice: 1;
+                }
+            
+                .style3 {
+                    border: 3px solid transparent;
+                    border-image: linear-gradient(to right, #ff5fcfa6, #06daffa6);
+                    border-image-slice: 1;
+                }
+            
+                .styleBack1 {
+                    border: 3px solid transparent;
+                    border-image: linear-gradient(to right, #20ff75a6, #fd4c20a6);
+                    border-image-slice: 1;
+                }
+            
+                .styleBack2 {
+                    border: 3px solid transparent;
+                    border-image: linear-gradient(to right, #1c45fda6, #baff5fa6);
+                    border-image-slice: 1;
+                }
+            
+                .styleBack3 {
+                    border: 3px solid transparent;
+                    border-image: linear-gradient(to right, #06daffa6, #ff5fcfa6);
+                    border-image-slice: 1;
+                }
+            }
+            
+        }
+    }
+    .price{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(var(--index) * 2) !important;
+        width: 70% !important;
+    }
+    .labelMoreDetail{
+        font-size: calc(var(--index) * 2) !important;
+        width: 70% !important;
+    }
+    .buy{
+    }
+    
+}

@@ -1,0 +1,17 @@
+:root{
+    --index: calc(1vw + 1vh);
+    --transition: 3s cubic-bezier(.05, .5, 0, 1);
+    --transitionForSeaSlider: cubic-bezier(.1, .7, 0, 1);
+}
+
+
+@keyframes toggleMainBodyContentRender {
+    0%{
+        opacity: 1;
+        transform: translateX(100vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}

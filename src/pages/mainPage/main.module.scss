@@ -1,0 +1,43 @@
+@import '../../null.scss';
+
+.background {
+    overflow: visible;
+    position: fixed;
+    top: 0 !important;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    filter: blur(.5vw) brightness(.4);
+}
+@media screen and (max-width: 850px) {
+    .mainWrapper{
+        // transform: translateX(-100vw);
+    }
+    .background {
+        background-color: rgb(255, 255, 255);
+        filter: none;
+        // display: none;
+    }
+}
+.mainWrapper{
+    // position: absolute;
+    transition-duration: .5s;
+    // transform: translateX(-50vw);
+}
+
+.downImage{
+    position: fixed;
+    top: -10vh;
+    width: 100vw;
+    height: 25vh;
+    // perspective: 1000px;
+    transform: translateZ(10px);
+
+    img{
+        width: 100%;
+        height: 100%;
+        // transform: translateZ(200px);
+        
+    }
+}

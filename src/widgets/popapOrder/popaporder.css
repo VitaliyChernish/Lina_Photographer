@@ -1,0 +1,26 @@
+@keyframes popapOrderStarted {
+    0% {
+        opacity: 0;
+        scale: 1.2;
+        backdrop-filter: blur(12px);
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+        backdrop-filter: blur(12px);
+    }
+}
+
+@keyframes popapOrderUnmount {
+    0% {
+        opacity: 1;
+        scale: 1;
+        backdrop-filter: blur(12px);
+    }
+    100% {
+        opacity: 0;
+        scale: 1.2;
+        backdrop-filter: blur(12px);
+    }
+}

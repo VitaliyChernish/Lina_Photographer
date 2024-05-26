@@ -1,0 +1,83 @@
+@import '../../main.scss';
+
+.buttonsWrapper {
+    position: sticky;
+    top: 2vw;
+    transform: translateX(92%);
+    z-index: 9999;
+    overflow: visible;
+
+    .buttonsContainer {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 2vw 0 0 2vw;
+        gap: 0vw;
+        background-color: rgb(126, 126, 126);
+        box-shadow: -.5vw .1vw 1vw black;
+
+        .buttons {
+            width: 4vw;
+            height: 4vw;
+            margin: 0;
+            border-radius: 50%;
+            filter: brightness(1);
+            margin: .5vw;
+            box-shadow: -.5vw .1vw 1vw rgba(0, 0, 0, 0.589);
+            box-sizing: border-box;
+            transition: box-shadow .5s ease, filter .5s ease;
+
+            .add,
+            .delete,
+            .save {
+                width: 100%;
+                height: 100%;
+                line-height: 3;
+                border: none;
+                color: white;
+                background-color: rgb(72, 99, 72);
+                border-radius: 50%;
+                font-size: .8vw;
+                text-transform: uppercase;
+                cursor: pointer;
+                box-shadow: inset 0vw 0vw 0vw rgba(0, 0, 0, 0.616);
+                transition: box-shadow .5s ease;
+            }
+
+            input {
+                display: none;
+            }
+
+            .add {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(129, 121, 95);
+
+                span {}
+            }
+
+            .delete {
+                background-color: rgb(126, 85, 85);
+            }
+
+            .add:hover {
+                box-shadow: inset .5vw .5vw .5vw rgba(0, 0, 0, 0.3);
+            }
+
+            .delete:hover {
+                box-shadow: inset .5vw .5vw .5vw rgba(0, 0, 0, 0.3);
+            }
+
+            .save:hover {
+                box-shadow: inset .5vw .5vw .5vw rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        .buttons:hover {
+            filter: brightness(.7);
+            box-shadow: 0vw 0vw 0vw black;
+        }
+    }
+}

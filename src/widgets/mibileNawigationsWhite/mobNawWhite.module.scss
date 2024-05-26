@@ -1,0 +1,225 @@
+// $transition: .75s;
+
+// .tab {
+//     z-index: 1000;
+//     position: fixed;
+//     bottom: 0;
+//     left: 0vw;
+//     display: flex;
+//     align-items: stretch;
+//     width: 100vw;
+//     height: 6vh;
+//     overflow: visible;
+
+//     &.moving .icon {
+//         pointer-events: none;
+//     }
+
+//     &[data-selected="1"] .icon:nth-child(1),
+//     &[data-selected="2"] .icon:nth-child(2),
+//     &[data-selected="3"] .icon:nth-child(3) {
+//         top: -2vh;
+//         color: #2ABA66;
+//         transition: .75s $transition/2;
+//         pointer-events: none;
+//         img{
+//             scale: 1.3;
+//         }
+//         &.initialised {
+//             animation: hide $transition*1.2 forwards;
+//         }
+//     }
+
+//     &[data-selected="1"] .bar .middle .side:first-child,
+//     &[data-selected="3"] .bar .middle .side:last-child {
+//         flex-grow: 0;
+//         //Sliding works with 2 `flex-grow:1` elements either side of the circle
+//         //To animate set the one you want to go to 0
+//     }
+
+//     .icons {
+//         position: absolute;
+//         z-index: 2;
+//         display: flex;
+//         justify-content: space-around;
+//         width: 100%;
+//         overflow: visible;
+
+//         .icon {
+//             position: relative;
+//             top: 0rem;
+//             width: 10vw;
+//             height: 10vw;
+//             // line-height: 4rem;
+//             // font-size: 1.5rem;
+//             cursor: pointer;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             transition-delay: $transition/4;
+//             filter: grayscale(1);
+//             img {
+//                 z-index: 1000;
+//                 width: 50%;
+//                 height: 50%;
+//                 pointer-events: none;
+
+//             }
+
+//             &.initialised {
+//                 //So animations don't start on load, .icon gets .initialised after it is clicked
+//                 animation: hide2 $transition/2;
+//             }
+//         }
+//     }
+
+//     .bar {
+//         z-index: 1;
+//         position: absolute;
+//         display: flex;
+//         align-items: stretch;
+//         justify-content: space-around;
+//         filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.1)) drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.1));
+//         //^ Otherwise everything is pointless, everything has lead up to this shadow
+//         width: 100%;
+//         height: 100%;
+//         overflow: visible;
+
+//         .cap {
+//             background:white;
+//             &:first-child {
+//                 //border-radius
+//                 // border-bottom-left-radius: 1rem;
+//                 // border-top-left-radius: 0.5rem;
+//                 //border-radius
+//                 box-shadow: 0.25rem 0 0 white;
+//                 //^ Sometimes when the circle moves small gaps <1px form on the sides, this makes an overlap to hide it
+//             }
+
+//             &:last-child {
+//                 //border-radius
+//                 // border-bottom-right-radius: 1rem;
+//                 // border-top-right-radius: 0.5rem;
+//                 //border-radius
+//                 box-shadow: -0.25rem 0 0 white;
+//             }
+//         }
+
+//         .middle {
+//             flex-grow: 1;
+//             position: relative;
+//             display: flex;
+//             justify-content: space-evenly;
+//             overflow: visible;
+
+//             .circle {
+//                 position: relative;
+//                 top: -1.75rem;
+//                 width: 7rem;
+//                 height: 5.75rem;
+//                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='92' viewBox='0 0 112 92'%3E%3Ccircle cx='56' cy='36' r='36' fill='%23FFF'/%3E%3Cpath d='M104 35.2L104 35.2c0 26.3-20.9 48.3-47.2 48.8C29.9 84.4 8 62.8 8 36v-0.8c0-4-3.2-7.2-7.2-7.2H0v64h112V28h-0.8C107.2 28 104 31.2 104 35.2z' fill='%23FFF'/%3E%3C/svg%3E");
+//                 //^ Cheating, or being smart? 
+
+//             }
+
+//             .side {
+//                 flex-grow: 1;
+//                 background: white;
+//                 transition: $transition ease;
+//                 background-color: red;
+//             }
+//         }
+//     }
+// }
+
+.navigation {
+    position: absolute;
+    top: 50vh;
+    width: 100vw;
+    height: 15vw;
+    background-color: rgb(235, 235, 235);
+    z-index: 111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: visible;
+
+    ul {
+        display: flex;
+        width: 100%;
+        overflow: visible;
+
+        .list {
+            position: relative;
+            width: calc(100vw / 4);
+            height: calc(100vw / 8);
+            cursor: pointer;
+            list-style: none;
+            z-index: 1;
+            overflow: visible;
+
+            .elementBlock {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                pointer-events: none;
+
+                .text {
+                    position: absolute;
+                    transition: .5s;
+                    transform: translateY(25px);
+                    opacity: 0;
+                    pointer-events: none;
+                }
+
+                .icon {
+                    position: relative;
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    line-height: 75px;
+                    font-size: 1.5em;
+                    text-align: center;
+                    transition: .5s;
+                    pointer-events: none;
+
+                    // filter: grayscale(1);
+                    img {
+                        pointer-events: none;
+                    }
+                }
+
+                span {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+.activeMobileNawigationBtn {
+    .icon {
+        transform: translateY(-8vw);
+    }
+
+    .text {
+        color: rgb(255, 0, 0);
+        opacity: 1 !important;
+        transform: translateY(5px) !important;
+    }
+}
+
+.indicator {
+    position: absolute;
+    width: 15vw;
+    height: 100%;
+    transform: translateY(-50%);
+    background-color: rgb(53, 53, 53);
+}

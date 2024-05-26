@@ -1,0 +1,31 @@
+@import '../../../null.scss';
+
+.logo {
+    width: calc(var(--index) * 15);
+    height: calc(var(--index) * 3);
+    background-repeat: no-repeat;
+    background-position: left;
+    position: relative;
+    z-index: 1;
+    transition-duration: .5s;
+    filter: brightness(.2);
+    cursor: pointer;
+}
+.logo:hover{
+    filter: brightness(1);
+}
+
+
+.logoMobile {
+    display: none;
+}
+
+@media screen and (max-width: 599px) {
+    .logoMobile {
+        position: absolute;
+        z-index: 5;
+        width: 50vw;
+        height: 18vh;
+        filter: drop-shadow(1vw 1vw 1vw rgb(255, 1, 1, .4));
+    }
+}

@@ -1,0 +1,55 @@
+@import '../../../null.scss';
+
+.menuMain {
+    position: relative;
+    pointer-events: all !important;
+    top: 0;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 103;
+    overflow: visible;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 20vh;
+
+        a {
+            cursor: pointer;
+            position: relative;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 900;
+            letter-spacing: .05vw;
+        }
+
+        a:hover::before {
+            transform: scale(1);
+            transition: transform .5s, color .5s;
+            transform-origin: left;
+        }
+
+        a:hover {
+            color: red;
+            transition: transform .5s, color .5s;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            transform-origin: right;
+            transition: transform .5s;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: .2vw;
+            background-color: red;
+            transform: scale(0);
+        }
+
+
+    }
+
+
+}

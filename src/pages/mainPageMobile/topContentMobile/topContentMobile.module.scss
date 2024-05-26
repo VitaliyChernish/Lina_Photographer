@@ -1,0 +1,112 @@
+@import '../../../null.scss';
+
+
+.cameraScreenWrapper {
+    position: relative;
+    top: 0vw;
+    width: 100vw;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    background-color: whitesmoke;
+
+    .cameraScreenContainer {
+        position: relative;
+        width: 100%;
+        left: 0;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+
+        .mainImg {
+            pointer-events: none;
+            position: absolute;
+            left: 35vw;
+            width: 80%;
+            height: 70%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 111;
+            filter: drop-shadow(5vw 5vw 8vw black) grayscale(1);
+        }
+        .gallery{
+            position: relative;
+            left: -11.5vw;       
+            overflow: visible;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .cameraScreenWrapper {
+        height: auto;
+        .mainImg {}
+
+        .cameraScreenContainer {
+            min-height: 80vw;
+            .mainImg {
+                left: 40vw;
+            }
+            .gallery{
+                position: relative;
+                left: 11vw;       
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cameraScreenWrapper {
+        display: none;
+        .mainImg {}
+
+        .cameraScreenContainer {
+            min-height: 65vw;
+            .mainImg {
+                left: 40vw;
+            }
+            .gallery{
+                position: relative;
+                left: 11.5vw;       
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cameraScreenWrapper {
+
+        .mainImg {}
+
+        .cameraScreenContainer {
+            min-height: 60vw;
+            .mainImg {
+                left: 40vw;
+            }
+            .gallery{
+                position: relative;
+                left: 11.5vw;       
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .cameraScreenWrapper {
+
+        .mainImg {}
+
+        .cameraScreenContainer {
+            min-height: 60vw;
+            .mainImg {
+                left: 40vw;
+            }
+            .gallery{
+                position: relative;
+                left: 11.5vw;       
+            }
+        }
+    }
+}

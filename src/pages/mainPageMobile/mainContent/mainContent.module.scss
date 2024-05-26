@@ -1,0 +1,232 @@
+@import '../../../null.scss';
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    .mainImage {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+    .content {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+
+        .left {
+            width: 50%;
+            height: 100%;
+            display: flex;
+
+            .leftSide {
+                width: 5vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                .blackRectangle {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: black;
+                    width: inherit;
+                    height: 75%;
+
+                    .dots {
+                        position: relative;
+                        top: 20%;
+                        height: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+
+                        span {
+                            display: block;
+                            width: 1vw;
+                            height: 1vw;
+                            background-color: whitesmoke;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .verticalName {
+                    pointer-events: none;
+                    user-select: none;
+                    width: inherit;
+                    height: 25%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    writing-mode: vertical-rl;
+                    text-align: center;
+                    text-orientation: upright;
+                    letter-spacing: .5vw;
+                    color: gray;
+                    text-transform: uppercase;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+
+            }
+
+            .rightSide {
+                width: 90%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .name,
+                .buttonOrder,
+                .smmLinks {
+                    position: relative;
+                    width: 50%;
+                    margin: 5vw;
+                }
+
+                .smmLinks {
+                    display: flex;
+                    justify-content: space-between;
+                    text-transform: uppercase;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 900;
+                }
+
+                .name {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 100;
+                    font-size: 3vw;
+                    color: gray;
+                    top: -5vw;
+                    text-transform: uppercase;
+                    pointer-events: none;
+                    user-select: none;
+                }
+
+                .buttonOrder {
+                    width: 30%;
+                    cursor: pointer;
+
+                    a {
+                        cursor: pointer;
+                        position: relative;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-weight: 900;
+                        letter-spacing: .05vw;
+                    }
+                    a::after {
+                        content: "";
+                        position: absolute;
+                        transform-origin: right;
+                        transition: transform .5s;
+                        left: 0;
+                        top: -5px;
+                        width: 100%;
+                        height: .1vw;
+                        animation: animate 2s infinite;
+                        background-color: rgba(255, 0, 0, 0.295);
+                    }
+
+                    @keyframes animate {
+                        0%{
+                            opacity: 0;
+                        }
+                        50%{
+                            opacity: 1;
+                        }
+                        100%{
+                            opacity: 0;
+                        }
+                    }
+
+                    a:hover::before {
+                        transform: scale(1);
+                        transition: transform .5s, color .5s;
+                        transform-origin: left;
+                    }
+
+                    a:hover {
+                        color: red;
+                        transition: transform .5s, color .5s;
+                    }
+
+                    a::before {
+                        content: "";
+                        position: absolute;
+                        transform-origin: right;
+                        transition: transform .5s;
+                        left: 0;
+                        bottom: -5px;
+                        width: 100%;
+                        height: .2vw;
+                        background-color: red;
+                        transform: scale(0);
+                    }
+                    
+                }
+            }
+        }
+
+        .right {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 50%;
+            height: 100%;
+
+            .menu {
+                position: relative;
+                right: 0;
+                margin: 5vw;
+            }
+
+            .middle {
+                position: relative;
+                right: 0;
+                text-transform: uppercase;
+                margin-right: 5vw;
+                text-align: end;
+                display: flex;
+                justify-content: space-between;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 100;
+                font-size: 3vw;
+                color: gray;
+                pointer-events: none;
+                user-select: none;
+            }
+
+            .smmIcons {
+                position: relative;
+                right: 0;
+                margin: 5vw;
+                width: 20%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        display: none;
+    }
+}

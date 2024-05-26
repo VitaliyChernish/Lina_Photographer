@@ -1,0 +1,41 @@
+@import '../main.scss';
+
+.header {
+    margin: var(--index);
+    margin-left: calc(var(--index) * 1.8);
+    font-weight: 900;
+}
+.mainContainer{
+    position: relative;
+    width: calc(var(--index) * 55);
+    margin-left: 3vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    color: rgb(22, 22, 23);
+    .leftPanel{
+        position: relative;
+        width: calc(var(--index) * 15);
+        background-color: white;
+        border-radius: 2vw;
+        box-shadow: .5vw .5vw 1.5vw rgba(0, 0, 0, 0.1),
+                .5vw .5vw 1.5vw rgba(0, 0, 0, 0.5),
+                inset .5vw .5vw 1.5vw rgba(199, 199, 199, 0.5);
+
+        overflow: hidden;
+    }
+    .rightPanel{
+        position: relative;
+        width: calc(var(--index) * 35);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 2vw;
+        box-shadow: .5vw .5vw 1.5vw rgba(0, 0, 0, 0.1),
+                .5vw .5vw 1.5vw rgba(0, 0, 0, 0.5),
+                inset .5vw .5vw 1.5vw rgba(199, 199, 199, 0.5);
+    }
+}

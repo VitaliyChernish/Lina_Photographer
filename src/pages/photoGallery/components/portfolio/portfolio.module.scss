@@ -1,0 +1,85 @@
+@import '../../null.scss';
+
+.portfolio {
+    .container {
+        padding: 0 7vw;
+        will-change: transform;
+
+        .gallery {
+            display: flex;
+            padding: calc(var(--index) *8) 0;
+            overflow: hidden;
+
+            .galeery__left {
+                will-change: transform;
+                position: relative;
+                margin-top: calc(var(--gallery-gap) * 1.75);
+            }
+
+            .gallery__right {
+                will-change: transform;
+                position: relative;
+
+                .galler__item {
+                    margin-top: calc(var(--gallery-gap));
+                    margin-bottom: 0;
+                }
+            }
+
+            .galeery__left,
+            .gallery__right {
+                .textBlock {
+                    color: var(--textColor);
+
+                    .textBlock__h {
+                        font-size: 2rem;
+                        line-height: 2.4rem;
+                        color: var(--headerColor);
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .textBlock__p {
+                        line-height: 1.75;
+                    }
+                }
+            }
+
+
+        }
+
+        .gallery>* {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+    }
+}
+
+.galler__item {
+    max-width: calc(var(--index) * 21);
+    margin-bottom: var(--gallery-gap);
+    max-height: 180vh;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .portfolio {
+        position: relative;
+        overflow: hidden !important;
+
+        .container {
+            overflow: hidden !important;
+
+            .gallery {
+                overflow: hidden !important;
+            }
+        }
+    }
+
+    .galeery__left {
+        background-color: red;
+        overflow: hidden !important;
+    }
+}

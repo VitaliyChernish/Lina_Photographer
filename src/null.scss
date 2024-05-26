@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 850px) {
+    *{
+        overflow-x: auto;
+    }
+}
+
+:root{
+    --index: calc(1vw + 1vh);
+    --transition: 3s cubic-bezier(.05, .5, 0, 1);
+    --transitionForSeaSlider: cubic-bezier(.1, .7, 0, 1);
+    --menucolor: #b34444;
+    --bordercolor: #2c2c2c;
+    --textcolor: white;
+    --buttonSuccessColor: rgb(72, 151, 92);
+    --mobileNavigationColor: whitesmoke;
+    --hexagonColor: rgb(68, 68, 68);
+    --accentColor: #538f9c;
+}
+
+@font-face{
+    font-family: kamerik-3d;
+    src: url(./static/fonts/kamerik205-heavy.woff2);
+    font-weight: 900;
+}
+
+@font-face{
+    font-family: marryweather-3d;
+    src: url(./static/fonts/merriweather-regular-italic.woff2);
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: kamerik-3d;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+

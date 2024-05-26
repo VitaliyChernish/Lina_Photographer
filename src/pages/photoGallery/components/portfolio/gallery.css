@@ -1,0 +1,33 @@
+#galleryItemRight {
+    filter: grayscale() brightness(.5);
+    transition-duration: .5s;
+    cursor: pointer;
+}
+
+#galleryItemRight:hover {
+    filter: inherit;
+}
+
+@keyframes goingToSlider {
+    0% {
+        opacity: 1;
+        scale: 1;
+        filter: blur(0) brightness(.5);
+    }
+
+    100% {
+        transform: translate(-20%, 0%);
+        opacity: 1;
+        scale: 3;
+        filter: blur(10px);
+    }
+}
+
+@keyframes galleryTogglePage {
+    0%{
+        filter: grayscale(0) brightness(1);
+    }
+    100%{
+        filter: grayscale() brightness(.5);
+    }
+}

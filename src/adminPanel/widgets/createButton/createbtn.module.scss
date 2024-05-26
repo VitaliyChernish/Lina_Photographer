@@ -1,0 +1,27 @@
+@import '../../../null.scss';
+
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+
+    button {
+        cursor: pointer;
+        background-color: var(--buttonSuccessColor);
+        padding: .5vw;
+        margin: .5vw;
+        border-radius: 1vw;
+        font-size: .8vw;
+        line-height: 1.5;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        filter: grayscale(.5);
+        transition-duration: .5s;
+    }
+    button:hover{
+        filter: grayscale(0);
+    }
+}

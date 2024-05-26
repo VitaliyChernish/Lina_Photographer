@@ -1,0 +1,83 @@
+.mainPageGallery{
+    position: absolute;
+    top: 10vw;
+    left: 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    filter: grayscale(1);
+    .layers__item__background_gallery{
+        position: relative;
+        width: 20vw;
+        height: 20vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: drop-shadow(1vw 1vw .5vw #000000a2) brightness(.7) blur(2px);
+    }
+}
+.layers__item__background_gallery:nth-child(1){
+    text-align: center;
+    top: 3vw;
+}
+.layers__item__background_gallery:nth-child(2){
+    text-align: center;
+    top: -9vw;
+}
+.layers__item__background_gallery:nth-child(3){
+    text-align: center;
+    top: -3vw;
+}
+.layers__item__background_gallery:nth-child(4){
+    text-align: center;
+    top: -7vw;
+}
+.layers__item__background_gallery:nth-child(6){
+    text-align: center;
+    top: -5vw;
+}
+
+@media screen and (max-width: 599px) {
+    .mainPageGallery{
+        position: absolute;
+        top: 15vw;
+        left: 0vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .layers__item__background_gallery{
+            position: relative;
+            width: 20vw;
+            height: 20vh;
+            margin: 3vw;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(1vw 1vw .5vw #000000a2) brightness(.5) blur(.5px);
+        }
+    }
+    .layers__item__background_gallery:nth-child(1){
+        text-align: center;
+        top: 3vw;
+    }
+    .layers__item__background_gallery:nth-child(2){
+        text-align: center;
+        top: -9vw;
+    }
+    .layers__item__background_gallery:nth-child(3){
+        text-align: center;
+        top: -3vw;
+    }
+    .layers__item__background_gallery:nth-child(4){
+        text-align: center;
+        top: -7vw;
+    }
+    .layers__item__background_gallery:nth-child(6){
+        text-align: center;
+        top: -5vw;
+    }
+}

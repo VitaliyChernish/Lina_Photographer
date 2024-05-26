@@ -1,0 +1,15 @@
+.activeIconFromLeftMenu{
+    scale: 1.4;
+    filter: brightness(1);
+}
+
+@keyframes toggleMainBodyContentUnmount {
+    0%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(100vw);
+    }
+}

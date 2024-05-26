@@ -1,0 +1,150 @@
+@import '../../null.scss';
+
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    padding: 5vw;
+    box-shadow: 0 0 3vw rgba(0, 0, 0, 0.25);
+    // border-radius: 1vw;
+    overflow: hidden;
+    // background-color: white;
+
+        button{
+            cursor: pointer;
+            // width: 15vw;
+            // height: 5vw;
+            background-color: transparent;
+            border: none;
+            color: white;
+
+            .accept,
+            .close{
+                background-color: black;
+                padding: 2vw;
+                transition-duration: .5s;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-weight: 700;
+                font-size: 1.5vw;
+            }
+            .close:hover{
+                color: red;
+            }
+    
+            .accept:hover{
+                color: green;
+            }
+        }
+        
+
+        // span {
+        //     overflow: hidden;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     color: #fff;
+        //     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        //     font-weight: 900;
+        //     background: #f84848;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     text-transform: uppercase;
+        //     letter-spacing: 2px;
+        //     font-size: 1.8vw;
+        //     letter-spacing: 0;
+        //     cursor: pointer;
+        // }
+
+        // span:nth-child(2) {
+        //     color: #6c4ba5;
+        //     background-color: #78ffbc;
+        //     overflow: hidden;
+        //     transition-duration: .5s;
+        //     clip-path: polygon(40% 0, 100% 0%, 100% 100%, 40% 100%, 30% 50%);
+        // }
+
+        // span:nth-child(2):hover {
+        //     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
+        // }
+
+        // span:nth-child(1):hover~span:nth-child(2) {
+        //     clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
+        // }
+
+        // span:nth-child(1):hover {
+        //     z-index: 1005;
+        // }
+    }
+
+// @media screen and (max-width: 600px) {
+//     .mainContainer {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         box-shadow: 0 0 3vw rgba(0, 0, 0, 0.25);
+//         border-radius: 1vw 0 1vw 0;
+//         overflow: visible;
+    
+//         .decline {
+//             position: relative;
+//             display: inline-block;
+//             width: 80vw;
+//             height: 30vw;
+
+//             .close{
+//                 position: absolute;
+//                 top: 5vw;
+//                 left: 2vw;
+//                 font-size: 3vw;
+//             }
+//             .accept{
+//                 position: absolute;
+//                 top: 23vw;
+//                 right: 2vw;
+//                 font-size: 3vw;
+//             }
+    
+//             span {
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 width: 100%;
+//                 height: 100%;
+//                 color: #ffffff;
+//                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+//                 font-weight: 900;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 text-transform: uppercase;
+//                 letter-spacing: 2px;
+//                 font-size: 4vw;
+//                 letter-spacing: 0;
+//                 cursor: pointer;
+//             }
+    
+//             span:nth-child(2) {
+//                 color: #6c4ba5;
+//                 overflow: hidden;
+//                 transition-duration: .5s;
+//                 clip-path: polygon(40% 0, 100% 0%, 100% 100%, 0% 100%, 100% 0%);
+//             }
+    
+//             span:nth-child(2):hover {
+//                 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
+//             }
+    
+//             span:nth-child(1):hover~span:nth-child(2) {
+//                 clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
+//             }
+    
+//             // span:nth-child(1):hover {
+//             //     z-index: 1005;
+//             // }
+//         }
+//     }
+// }

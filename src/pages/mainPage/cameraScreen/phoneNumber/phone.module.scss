@@ -1,0 +1,101 @@
+@import '../../../../null.scss';
+
+.phuneNumberWrapper {
+    overflow: visible;
+    position: absolute;
+    top: 3vw;
+    left: 1.7vw;
+    width: 30%;
+    height: 2vw;
+    background-color: rgb(121, 95, 71);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5vw;
+    transition-duration: .75s;
+    opacity: 0;
+
+    .close {
+        position: absolute;
+        cursor: pointer;
+        pointer-events: all;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: .8vw;
+        height: .8vw;
+        background-color: rgb(218, 218, 218);
+        border: .1vw solid rgb(78, 78, 78);
+        left: 9vw;
+        top: -.3vw;
+        border-radius: 50%;
+        z-index: 124;
+        transition-duration: .5s;
+        transform: rotateZ(45deg);
+
+        .first {
+            position: absolute;
+            width: 50%;
+            height: 1px;
+            background-color: rgba(104, 104, 104, 0.473);
+        }
+
+        .second {
+            position: absolute;
+            width: 1px;
+            height: 50%;
+            background-color: rgba(104, 104, 104, 0.473);
+        }
+    }
+
+    .close:hover {
+        scale: 1.1;
+        transform: rotateZ(135deg);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .phuneNumberWrapper {
+        left: 2.5vw;
+        top: 4vw;
+        width: 20vw;
+        height: 4vw;
+        opacity: 1 !important;
+        overflow: visible;
+
+        .close {
+            top: 0vw;
+            width: 4vw;
+            height: 4vw;
+            left: 19vw;
+        }
+
+        .phuneNumberContainer {
+
+            font-size: 1.8vw;
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .phuneNumberWrapper {
+        left: 2.5vw;
+        top: 4vw;
+        width: 20vw;
+        height: 4vw;
+        opacity: 1 !important;
+        overflow: visible;
+
+        .close {
+            top: 0vw;
+            width: 4vw;
+            height: 4vw;
+            left: 19vw;
+        }
+
+        .phuneNumberContainer {
+
+            font-size: 1.8vw;
+        }
+    }
+}

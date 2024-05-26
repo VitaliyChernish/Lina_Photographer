@@ -1,0 +1,194 @@
+@import '../../null.scss';
+
+$scaleCoefficient: 1.3;
+
+.wrapper {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vw;
+    overflow: visible;
+
+    .mainBlock {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+        border-radius: inherit;
+        perspective: 23vw;
+        color: black;
+
+        img {
+            width: 60vw;
+            transform: rotateY(15deg) translateX(12vw);
+            // box-shadow:  -1vw -0vw 1vw rgba(43, 43, 43, 0.918);
+            filter: grayscale(1);
+
+            cursor: pointer;
+            box-shadow: .5vw .5vw 1.5vw rgba(0, 0, 0, 0.2),
+                .5vw .5vw 1.5vw rgba(0, 0, 0, 0.2),
+                -.5vw -.5vw 1.5vw rgba(255, 255, 255, 0.5),
+                -.5vw -.5vw 1.5vw rgba(255, 255, 255, .5),
+                -.5vw -.5vw 1.5vw rgba(255, 255, 255, .5),
+                inset 2vw 1vw 3vw rgba(0, 0, 0, 0.02);
+        }
+        .textcontainer {
+
+            .textPainFirst,
+            .textPain {
+                margin: 5vw;
+                font-size: 5vw;
+                font-weight: 900;
+            }
+
+            .textPainFirst {
+                color: var(--mobileNavigationColor);
+            }
+
+            .callToAction {
+                position: relative;
+                height: 5vh;
+                background-color: var(--mobileNavigationColor);
+                font-weight: 100;
+                color: rgba(255, 255, 255, 0.555);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .mainBlock::after {
+        content: 'GALLERY';
+        writing-mode: vertical-rl;
+        text-align: center;
+        text-orientation: upright;
+        position: absolute;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 900;
+        font-size: 5vw;
+        left: -2.3vw;
+        width: 11vw;
+        height: 123%;
+        z-index: 10;
+        line-height: 10vw;
+        transform: rotateY(-5deg) translateX(0vw);
+        transition: background-color .5s;
+        background-color: #b9b9b9;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
+
+        box-shadow: .5vw .5vw 1.5vw rgba(0, 0, 0, 0.2),
+            .5vw .5vw 1.5vw rgba(0, 0, 0, 0.2),
+            -.5vw -.5vw 1.5vw rgba(255, 255, 255, 0.5),
+            -.5vw -.5vw 1.5vw rgba(255, 255, 255, .5),
+            -.5vw -.5vw 1.5vw rgba(255, 255, 255, .5),
+            inset 2vw 1vw 3vw rgba(0, 0, 0, 0.02);
+    }
+
+    .mainBlock:hover::after {
+        transition: background-color .5s;
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .wrapper {
+        scale: .8;
+
+        .mainBlock {
+
+            img {}
+
+            .textcontainer {
+
+                .textPainFirst,
+                .textPain {}
+
+                .textPainFirst {}
+
+                .callToAction {}
+            }
+        }
+
+        .mainBlock::after {}
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        scale: .7;
+
+        .mainBlock {
+
+            img {}
+
+            .textcontainer {
+
+                .textPainFirst,
+                .textPain {}
+
+                .textPainFirst {}
+
+                .callToAction {}
+            }
+        }
+
+        .mainBlock::after {}
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        scale: .7;
+
+        .mainBlock {
+
+            img {}
+
+            .textcontainer {
+
+                .textPainFirst,
+                .textPain {}
+
+                .textPainFirst {}
+
+                .callToAction {}
+            }
+        }
+
+        .mainBlock::after {}
+    }
+}
+
+
+@media screen and (min-width: 1366px) {
+    .wrapper {
+        scale: .6;
+
+        .mainBlock {
+
+            img {}
+
+            .textcontainer {
+
+                .textPainFirst,
+                .textPain {}
+
+                .textPainFirst {}
+
+                .callToAction {}
+            }
+        }
+
+        .mainBlock::after {}
+    }
+}

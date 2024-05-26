@@ -1,0 +1,81 @@
+@import '../../../null.scss';
+
+// @media screen and (max-width: 599px) {
+
+.headerWrapper {
+    position: relative;
+    z-index: 101;
+    width: 100vw;
+    height: 45vw;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .headerContainer {
+        position: relative;
+        z-index: 101;
+        width: 80vw;
+        height: 50%;
+        padding-top: 1vh;
+        border-radius: 2vw;
+        box-shadow: .5vw .5vw 1.5vw rgba(0, 0, 0, 0.2),
+            .5vw .5vw 1.5vw rgba(0, 0, 0, 0.2),
+            -.5vw -.5vw 1.5vw rgba(255, 255, 255, 0.5),
+            -.5vw -.5vw 1.5vw rgba(255, 255, 255, .5),
+            -.5vw -.5vw 1.5vw rgba(255, 255, 255, .5),
+            inset 2vw 1vw 3vw rgba(0, 0, 0, 0.02);
+
+        .lina {
+            text-shadow: .3vw .3vw .5vw var(--mobileNavigationColor),
+                1vw 1vw 15vw;
+            background-color: #b9b9b9;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: .2vw .2vw .2vw rgba(255, 255, 255, 0.3);
+        }
+
+        h1,
+        h2 {
+            position: relative;
+            left: 7vw;
+            color: black;
+            // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #b9b9b9;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: .2vw .2vw .2vw rgba(255, 255, 255, 0.3);
+
+            span {
+                color: var(--mobileNavigationColor);
+                background-color: #b9b9b9;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-shadow: .2vw .2vw .2vw rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        h1 {
+            font-size: 9vw;
+        }
+
+        h2 {
+            font-size: 4.5vw;
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .headerWrapper {
+        display: none;
+    }
+}
+
+// }

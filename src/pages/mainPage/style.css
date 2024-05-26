@@ -1,0 +1,117 @@
+@media screen and (max-width: 850px) {
+    #mainPageWrapperContainer{
+        overflow-x: hidden !important;
+    }
+}
+@keyframes opacityAnimation {
+    0% {
+        opacity: 1;
+        scale: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 0;
+        scale: 2;
+        filter: blur(10px);
+    }
+}
+
+@keyframes transitionLogo {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes opacityMainPageStarted {
+    0% {
+        opacity: 0;
+        scale: 1.2;
+        filter: blur(30px);
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes opacityMainPageUnmount {
+    0% {
+        opacity: 1;
+        scale: 1;
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        scale: 1.2;
+        filter: blur(30px);
+    }
+}
+a{
+    animation: some 1s forwards ease-in-out;
+}
+@keyframes mountMainPageMobile {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 1;
+        scale: 1;
+        filter: blur(30px);
+    }
+    100% {
+        transform: translateX(0vw);
+        opacity: 1;
+        scale: 1;
+        filter: blur(0px);
+    }
+}
+@keyframes unmountMainPageMobile {
+    0% {
+        transform: translateX(0vw);
+        opacity: 1;
+        scale: 1;
+        filter: blur(0px);
+    }
+    100% {
+        transform: translateX(-100vw);
+        opacity: 1;
+        scale: 1;
+        filter: blur(30px);
+    }
+}
+
+@keyframes mountCalendarMobile {
+    0% {
+        transform: translateX(100vw);
+        opacity: 1;
+        scale: 1;
+        filter: blur(30px);
+    }
+    100% {
+        transform: translateX(0vw);
+        opacity: 1;
+        scale: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes unmountCalendarMobile {
+    0% {
+        transform: translateX(0vw);
+        opacity: 1;
+        scale: 1;
+        filter: blur(0px);
+    }
+    100% {
+        transform: translateX(100vw);
+        opacity: 1;
+        scale: 1;
+        filter: blur(30px);
+    }
+}

@@ -1,0 +1,41 @@
+@import "../../../../null.scss";
+
+.onCameraMenuWrapper {
+    position: absolute;
+    width: 100%;
+    height: 2vw;
+    background-color: rgba(202, 202, 202, 0.164);
+    border-radius: 1vw 1vw 0 0;
+    box-shadow: .1vw .1vw 1vw black;
+    border-top: .2vw solid black;
+
+    .cameramunues {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 70%;
+        height: 100%;
+
+        .menuItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 25%;
+            height: 80%;
+            background-color: rgb(102, 100, 100);
+            border-radius: .3vw;
+            box-shadow: inset .1vw .1vw .1vw black;
+            transition-duration: 1s;
+
+            img {
+                width: 1.2vw;
+            }
+
+            span {
+                font-size: .8vw;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            }
+        }
+
+    }
+}

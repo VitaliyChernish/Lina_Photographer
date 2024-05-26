@@ -1,0 +1,51 @@
+@import '../main.scss';
+
+.topContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 5% 2% 5%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.61);
+
+    .leftBlock {
+        color: black;
+
+        h1 {
+            font-size: x-large;
+        }
+
+        span {
+            font-size: small;
+        }
+    }
+
+    .rightBlock {
+        display: flex;
+        flex-direction: row;
+        gap: var(--index);
+
+        .avatar,
+        .helpIcon {
+            width: calc(var(--index) * .7);
+            height: calc(var(--index) * .7);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: white;
+            border: calc(var(--index) * .2) solid white;
+            box-sizing: content-box;
+            border-radius: 50%;
+            transition-duration: .5s;
+            cursor: pointer;
+        }:hover{
+            scale: 1.1;
+        }
+
+        .avatar {
+            width: calc(var(--index) * 1);
+            height: calc(var(--index) * 1);
+            border: none;
+        }
+    }
+}

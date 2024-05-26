@@ -1,0 +1,19 @@
+@import '../../null.scss';
+
+.wrapper{
+    box-sizing: border-box;
+    position: absolute;
+    width: 7vw;
+    height: 3vw;
+    background-color: rgba(255, 0, 0, 0.527);
+    border: .3vw solid rgba(255, 255, 255, 0.76);
+    top: 8vw;
+    left: 17vw;
+    transform: rotateZ(-15deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        color: white;
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../../null.scss';
+
+.videoMain{
+    transition-duration: .5s;
+    filter: brightness(.4);
+    cursor: pointer;
+}
+
+.videoMain:hover{
+    filter: inherit;
+}

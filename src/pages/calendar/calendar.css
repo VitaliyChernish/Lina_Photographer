@@ -1,0 +1,26 @@
+@keyframes calendarWrapperStarted {
+    0% {
+        opacity: 0;
+        scale: 1.2;
+        filter: blur(30px);
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes opacityMainPageUnmount {
+    0% {
+        opacity: 1;
+        scale: 1;
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        scale: 1.2;
+        filter: blur(30px);
+    }
+}

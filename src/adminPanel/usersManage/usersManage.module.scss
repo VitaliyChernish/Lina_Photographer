@@ -1,0 +1,15 @@
+@import '../main.scss';
+.header {
+    margin: var(--index);
+    margin-left: calc(var(--index) * 1.8);
+    font-weight: 900;
+}
+.mainContainer{
+    position: relative;
+    width: calc(var(--index) * 57);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    color: rgb(22, 22, 23);
+}

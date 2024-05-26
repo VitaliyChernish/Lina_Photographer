@@ -1,0 +1,39 @@
+@import '../../main.scss';
+
+.wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.2);
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .background{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(12px);
+        z-index: 11;
+    }
+    .mainContent{
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        border-radius: 2vw;
+        box-shadow: .5vw .5vw 1.5vw rgba(0, 0, 0, 0.1),
+                .5vw .5vw 1.5vw rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 0, 0, 0.329);
+        z-index: 111;
+
+        .close{
+            cursor: pointer;
+            width: 3vw;
+            height: 3vw;
+            background-color: green;
+            border-radius: 2vw 0 0 0;
+        }
+    }
+}

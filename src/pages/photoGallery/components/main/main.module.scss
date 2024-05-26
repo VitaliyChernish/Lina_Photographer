@@ -1,0 +1,24 @@
+@import '../../null.scss';
+
+.headerPhotoGallery{
+    position: fixed;
+    top: 0;
+}
+
+.portfolioPhotoGallery{
+    position: relative;
+    top: 100vh;
+    // background-color: gray;
+}
+
+@media screen and (max-width: 600px) {
+    .headerPhotoGallery{
+        position: absolute;
+        top: 0;
+    }
+    .portfolioPhotoGallery{
+        position: relative;
+        top: 30vw;
+        // background-color: gray;
+    }
+}

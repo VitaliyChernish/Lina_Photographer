@@ -1,0 +1,50 @@
+.container {
+    position: relative;
+    width: 100vw;
+    overflow: visible !important;
+
+    .mainHeader {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible !important;
+        margin-top: 10vw;
+        padding-bottom: 5vw;
+
+        .mainTitle {
+            position: relative;
+            width: 90vw;
+            font-size: 15vw;
+            line-height: 1;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 900;
+
+            background-color: #161616;
+            -webkit-text-fill-color: transparent;
+            /* переопределяет цвет текста с белого на прозрачный в браузерах на webkit */
+            -webkit-background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: -2px 1vw 1vw rgba(92, 92, 92, 0.3);
+            text-shadow:
+                /*this is the real color of the text - just blurred*/
+                -2px 5px 5px rgba(233, 233, 233, 0.6),
+
+                /* these are the dark inset shadows 
+         the second one add a sharper look and depth to the top of the letters */
+                0px -1px 0 rgba(0, 0, 0, .6);
+
+            /* these are the highlights - using rgba you can change the last value if they are too (or too little) bright */
+            // -1px 1px 0 rgba(255, 255, 255, 0.5);
+
+            overflow: visible !important;
+
+            p {
+                overflow: visible;
+            }
+        }
+    }
+}

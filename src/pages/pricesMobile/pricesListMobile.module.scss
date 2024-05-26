@@ -1,0 +1,85 @@
+@import '../../null.scss';
+
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    height: var(--height-wrapper, 85vh);
+    background-color: whitesmoke;
+}
+
+.photoImage {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    animation-duration: 1s;
+    opacity: 1;
+    border-radius: 0 0 5vw 5vw;
+    top: var(--top-value, 0);
+    overflow: visible;
+}
+
+.items {
+    position: relative;
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    // bottom: 0;
+    overflow: visible;
+    overflow-y: hidden;
+    margin-top: var(--top-content, 0);
+
+    .sliderImages {
+        position: relative;
+        bottom: 0;
+        // height: calc(var(--index) * 15);
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        overflow: visible;
+        overflow-y: hidden;
+
+        .item {
+            background-color: whitesmoke;
+            color: black;
+            width: 35vw;
+            height: 25vh;
+            padding: 2.5vw;
+            margin: 5vw 2.5vw;
+            background-size: cover;
+            background-position: center;
+            transition: transform 1.5s var(--transitionForSeaSlider), filter 3s var(--transitionForSeaSlider), width 1.5s var(--transitionForSeaSlider);
+            will-change: transform, filter;
+            filter: grayscale(0) brightness(1);
+            cursor: pointer;
+            border-radius: 3vw;
+            overflow: visible;
+            overflow-y: hidden;
+            box-sizing: border-box;
+            box-shadow: .5vw .5vw 1.5vw rgba(0, 0, 0, 0.2);
+            transform: translateY(0vh);
+
+            .content{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                p{
+                    color: rgba(53, 53, 53, 0.664) !important;
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+
+}

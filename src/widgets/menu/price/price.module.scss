@@ -1,0 +1,11 @@
+@import '../../../null.scss';
+
+.priceMain{
+    transition-duration: .5s;
+    filter: brightness(.4);
+    cursor: pointer;
+}
+
+.priceMain:hover{
+    filter: inherit;
+}
