@@ -14,10 +14,28 @@ const Portfolio = () => {
     return (
         <section className={s.wrapper}>
                 <img id="photoImageForMountCompinent" className={s.photoImage} src={`${serverApi}/static/${justImage[0]}`} alt="photo_image" />
+                <div className={s.services}>
+                    <ul>
+                        <li>Студийна</li>
+                        <li>Вулична</li>
+                        <li>Репортажна</li>
+                        <li>Предметна</li>
+                        <li>Заходи</li>
+                    </ul>
+                </div>
                 <div className={s.items}>
                     {justImage.map((el, i) => {
                         return <div key={i} className={s.item} tabIndex='1' style={{ backgroundImage: `url(${serverApi}/static/${el.filename})` }}></div>
                     })}
+                </div>
+                <div className={s.servicesBottom}>
+                    <ul>
+                        <li>Від 2 годин</li>
+                        <li>Від 1,5 годин</li>
+                        <li>Від 2 годин</li>
+                        <li>Від 1 години</li>
+                        <li>Від 2 годин</li>
+                    </ul>
                 </div>
         </section>
     )
